@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spam prediction</title>
+  </head>
+
+  <body bgcolor="black" text="white">
+    <h1>
+      <b>
+        <i>
+          <font size="15"> SMS SPAM Prediction </font>
+        </i>
+      </b>
+    </h1>
+    <div style="background-color: white">
+      <hr />
+      <hr />
+    </div>
+    <h2>Enter the details to check whether spam or not!</h2>
+    <h4>
+      <form action="{{url_for('predict')}}" method="post">
+        Message :
+        <input
+          type="text"
+          name="text"
+          placeholder="Enter your text"
+          required="required"
+        />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+    </h4>
+    <h2>
+      <b> {{ prediction_text }} </b>
+    </h2>
+  </body>
+</html>
